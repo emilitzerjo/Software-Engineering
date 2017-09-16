@@ -18,21 +18,19 @@ public class AinfStudentErzeuger extends Erzeuger {
      * @return AinfStudent
      */
     @Override
-    protected Student erzeugeStudent() {
+    protected Student erzeugeKonkretenStudent() {
         Scanner scanner = new Scanner(System.in);
 
         //Abfrage des besonderen Eigenschaft
         System.out.println("Programmiersprache(n) eingeben:");
         String programmiersprache = scanner.nextLine();
 
-        AinfStudent ainfStudent = new AinfStudent(programmiersprache);
-
-        return ainfStudent;
+        return new AinfStudent(programmiersprache);
     }
 
 
     @Override
-    public String getStudentenArt() {
+    public String getStudiengang() {
         return "angewandte Informatik";
     }
 

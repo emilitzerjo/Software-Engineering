@@ -13,7 +13,7 @@ public class AinfStudent extends Student {
     private String programmiersprache;
 
     /**
-     * @param programmiersprache
+     * @param programmiersprache Programmiersprache die er am besten kann
      */
     public AinfStudent(String programmiersprache) {
         this.programmiersprache = programmiersprache;
@@ -29,6 +29,6 @@ public class AinfStudent extends Student {
 
     @Override
     public String toString() {
-        return "AinfStudent = " + super.toString() + " Programmiersprache: " + programmiersprache;
+        return "AinfStudent = " + super.getStammdatenFormatiert() + " Programmiersprache: " + programmiersprache;
     }
 }

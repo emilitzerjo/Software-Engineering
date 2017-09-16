@@ -16,8 +16,8 @@ public class WingStudent extends Student {
     /**
      * Konstruktor für einen Wing-Studenten
      *
-     * @param lieblingswerkzeug
-     * @param praktikumsstunden
+     * @param lieblingswerkzeug Das Werkzeug welches er am liebsten benutzt.
+     * @param praktikumsstunden Die Anzahl der Stunden die er als Praktikant in der Werkstatt verbracht hat.
      */
     public WingStudent(String lieblingswerkzeug, int praktikumsstunden) {
         this.lieblingswerkzeug = lieblingswerkzeug;
@@ -42,6 +42,6 @@ public class WingStudent extends Student {
 
     @Override
     public String toString() {
-        return "Wing-Student = " + super.toString() + " Lieblingswerkzeug: " + lieblingswerkzeug+" Praktikumsstunden: "+praktikumsstunden;
+        return "Wing-Student = " + super.getStammdatenFormatiert() + " Lieblingswerkzeug: " + lieblingswerkzeug+" Praktikumsstunden: "+praktikumsstunden;
     }
 }

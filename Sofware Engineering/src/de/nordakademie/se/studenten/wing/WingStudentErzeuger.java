@@ -18,7 +18,7 @@ public class WingStudentErzeuger extends Erzeuger {
      * @return Wing-Student
      */
     @Override
-    protected Student erzeugeStudent() {
+    protected Student erzeugeKonkretenStudent() {
         Scanner scanner = new Scanner(System.in);
 
         //Abfrage von besonderen Eigenschaften
@@ -27,13 +27,12 @@ public class WingStudentErzeuger extends Erzeuger {
         System.out.println("Praktikumsstunden eingeben:");
         int praktikumsstunden = scanner.nextInt();
 
-        WingStudent wingStudent = new WingStudent(lieblingswerkzeug, praktikumsstunden);
-        return wingStudent;
+        return new WingStudent(lieblingswerkzeug, praktikumsstunden);
     }
 
 
     @Override
-    public String getStudentenArt() {
+    public String getStudiengang() {
         return "Wirtschaftsingenieurwesen";
     }
 

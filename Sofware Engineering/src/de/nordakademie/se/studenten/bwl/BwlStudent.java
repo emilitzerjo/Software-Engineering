@@ -13,7 +13,9 @@ public class BwlStudent extends Student {
     private String golfplatz;
 
     /**
-     * @param golfplatz
+     *
+     *
+     * @param golfplatz Name des Lieblingsgolfplatzes
      */
     public BwlStudent(String golfplatz) {
         this.golfplatz = golfplatz;
@@ -29,7 +31,7 @@ public class BwlStudent extends Student {
 
     @Override
     public String toString() {
-        return "BWL-Stundent vong Geld her = " + super.toString() + " Golfplatz: " + golfplatz;
+        return "BWL-Stundent vong Geld her = " + super.getStammdatenFormatiert() + " Golfplatz: " + golfplatz;
     }
 
 }

@@ -14,7 +14,7 @@ public abstract class Erzeuger {
      *
      * @return Konkreter Student
      */
-    protected abstract Student erzeugeStudent();
+    protected abstract Student erzeugeKonkretenStudent();
 
 
     /**
@@ -22,7 +22,7 @@ public abstract class Erzeuger {
      *
      * @return Name des Studienganges
      */
-    public abstract String getStudentenArt();
+    public abstract String getStudiengang();
 
 
     /**
@@ -30,7 +30,7 @@ public abstract class Erzeuger {
      *
      * @return initialisierter Student
      */
-    public Student erstelleStudent() {
+    public Student erzeugeStudent() {
         Scanner scanner = new Scanner(System.in);
 
         //Stammdaten einlesen
@@ -40,7 +40,7 @@ public abstract class Erzeuger {
         int jahrgang = scanner.nextInt();
 
         //Student durch implementierung der Unterklasse erzeugen
-        Student student = erzeugeStudent();
+        Student student = erzeugeKonkretenStudent();
 
         //Stammdaten setzen
         student.setName(name);

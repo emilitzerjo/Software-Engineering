@@ -18,20 +18,19 @@ public class BwlStudentErzeuger extends Erzeuger {
      * @return BWL Student
      */
     @Override
-    protected Student erzeugeStudent() {
+    protected Student erzeugeKonkretenStudent() {
         Scanner scanner = new Scanner(System.in);
         //Abfrage der besonderen Eigenschaft.
         System.out.println("Lieblingsgolfplatz eingeben:");
         String golfplatz = scanner.nextLine();
 
-        BwlStudent bwlStudent = new BwlStudent(golfplatz);
+        return new BwlStudent(golfplatz);
 
-        return bwlStudent;
     }
 
 
     @Override
-    public String getStudentenArt() {
+    public String getStudiengang() {
         return "BWL";
     }
 

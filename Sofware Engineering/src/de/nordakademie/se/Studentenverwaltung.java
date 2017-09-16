@@ -41,13 +41,13 @@ public class Studentenverwaltung {
 
             //Alle vorhandenen Studentenarten werden ausgegeben
             for (int i = 0; i < erzeuger.length; i++) {
-                System.out.println(i + ")" + erzeuger[i].getStudentenArt());
+                System.out.println(i + ")" + erzeuger[i].getStudiengang());
             }
             System.out.print("Wähle Studentenart aus:");
             type = scanner.nextInt();
         }
         //Ein Student wird mit dem ausgewählten Erzeuger erzeugt
-        studenten.add(erzeuger[type].erstelleStudent());
+        studenten.add(erzeuger[type].erzeugeStudent());
     }
 
     /**
@@ -55,7 +55,9 @@ public class Studentenverwaltung {
      */
     private void zeigeAlleStudenten() {
         for (Student student : studenten) {
-            System.out.println(student);
+
+            //Funktion welche auf allen Studenten egal welcher Art aufgerufen wird
+            System.out.println(student.toString());
         }
     }
 

@@ -27,12 +27,19 @@ public abstract class Student {
     }
 
     /**
+     * @return Die Formatierten Stammdaten des Studenten
+     */
+    protected String getStammdatenFormatiert(){
+            return "Name: " + name + " Jahrgang: " + jahrgang;
+    }
+
+    /**
+     * Die konkrete Stringdarstellung ist von den Unterklassen zu Implementieren.
+     *
      * @return Stringdarstellung eines Studenten
      */
     @Override
-    public  String toString() {
-        return "Name: " + name + " Jahrgang: " + jahrgang;
-    }
+    public abstract String toString();
 
 
 }
