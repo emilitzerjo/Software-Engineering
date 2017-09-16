@@ -18,7 +18,7 @@ public class AinfStudentErzeuger extends Erzeuger {
      * @return AinfStudent
      */
     @Override
-    public Student erzeugeStudent() {
+    protected Student erzeugeStudent() {
         Scanner scanner = new Scanner(System.in);
 
         //Abfrage des besonderen Eigenschaft

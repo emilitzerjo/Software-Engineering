@@ -42,6 +42,6 @@ public class WingStudent extends Student {
 
     @Override
     public String toString() {
-        return "Wing-Student = " + super.toString() + " Lieblingswerkzeug: " + lieblingswerkzeug;
+        return "Wing-Student = " + super.toString() + " Lieblingswerkzeug: " + lieblingswerkzeug+" Praktikumsstunden: "+praktikumsstunden;
     }
 }

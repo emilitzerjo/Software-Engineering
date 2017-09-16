@@ -18,7 +18,7 @@ public class BwlStudentErzeuger extends Erzeuger {
      * @return BWL Student
      */
     @Override
-    public Student erzeugeStudent() {
+    protected Student erzeugeStudent() {
         Scanner scanner = new Scanner(System.in);
         //Abfrage der besonderen Eigenschaft.
         System.out.println("Lieblingsgolfplatz eingeben:");

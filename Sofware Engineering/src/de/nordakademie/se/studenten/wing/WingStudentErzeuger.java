@@ -18,13 +18,13 @@ public class WingStudentErzeuger extends Erzeuger {
      * @return Wing-Student
      */
     @Override
-    public Student erzeugeStudent() {
+    protected Student erzeugeStudent() {
         Scanner scanner = new Scanner(System.in);
 
         //Abfrage von besonderen Eigenschaften
         System.out.println("Lieblingswerkzeug eingeben:");
         String lieblingswerkzeug = scanner.nextLine();
-        System.out.println("Lieblingswerkzeug eingeben:");
+        System.out.println("Praktikumsstunden eingeben:");
         int praktikumsstunden = scanner.nextInt();
 
         WingStudent wingStudent = new WingStudent(lieblingswerkzeug, praktikumsstunden);
