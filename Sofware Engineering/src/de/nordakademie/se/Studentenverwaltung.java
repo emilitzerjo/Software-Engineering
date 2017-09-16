@@ -1,7 +1,8 @@
 package de.nordakademie.se;
 
-import de.nordakademie.se.framework.Erzeuger;
 import de.nordakademie.se.framework.Student;
+import de.nordakademie.se.studenten.ainf.AinfStudent;
+import de.nordakademie.se.studenten.wing.WingStudent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,38 +17,65 @@ import java.util.Scanner;
  */
 public class Studentenverwaltung {
 
-    //Alle Erzeuger für die verschiedenen Studentenarten
-    private Erzeuger[] erzeuger;
-
     //Alle registrierten Studenten
     private List<Student> studenten;
 
-    public Studentenverwaltung(Erzeuger... erzeuger) {
-        super();
-        this.erzeuger = erzeuger;
+    public Studentenverwaltung() {
         this.studenten = new ArrayList<>();
     }
 
 
     /**
-     * Erzeugung eines neuen Studenten. Es können alle Studentenarten erzeugt werden, für die ein konkreter Erzeuger existiert.
+     * Erzeugung eines neuen Studenten.
      */
     private void registriereNeuenStudent() {
         Scanner scanner = new Scanner(System.in);
-
         int type = -1;
         // so lange keine vorhandene Studentenart ausgewählt wird erfolgt die Abfrage
-        while (type < 0 || type >= erzeuger.length) {
-
+        while (type < 0 || type >= 2) {
             //Alle vorhandenen Studentenarten werden ausgegeben
-            for (int i = 0; i < erzeuger.length; i++) {
-                System.out.println(i + ")" + erzeuger[i].getStudiengang());
-            }
+            System.out.println("0) angewandte Informatik");
+            System.out.println("1) Wirtschaftsingenieurwesen");
+
             System.out.print("Wähle Studentenart aus:");
             type = scanner.nextInt();
         }
-        //Ein Student wird mit dem ausgewählten Erzeuger erzeugt
-        studenten.add(erzeuger[type].erzeugeStudent());
+        if(type == 0){
+            //Abfrage der nötigen Daten
+            System.out.println("Bitte Name eingeben: ");
+            String name = scanner.next();
+            System.out.println("Bitte Jahrgang eingeben: ");
+            int jahrgang = scanner.nextInt();
+            System.out.println("Bitte Lieblingsprogrammiersprache eingeben");
+            String programmiersprache = scanner.next();
+
+            //Erstellung des Studenten
+            AinfStudent ainfStudent = new AinfStudent(programmiersprache);
+            ainfStudent.setName(name);
+            ainfStudent.setJahrgang(jahrgang);
+
+            //Hinzufügen des Studenten in die Liste
+            studenten.add(ainfStudent);
+        }else if(type == 1){
+
+            //Abfrage der nötigen Daten
+            System.out.println("Bitte Name eingeben: ");
+            String name = scanner.next();
+            System.out.println("Bitte Jahrgang eingeben");
+            int jahrgang = scanner.nextInt();
+            System.out.println("Lieblingswerkzeug eingeben:");
+            String lieblingswerkzeug = scanner.next();
+            System.out.println("Praktikumsstunden eingeben:");
+            int praktikumsstunden = scanner.nextInt();
+
+            //Erstellung des Studenten
+            WingStudent wingStudent = new WingStudent(lieblingswerkzeug, praktikumsstunden);
+            wingStudent.setLieblingswerkzeug(lieblingswerkzeug);
+            wingStudent.setPraktikumsstunden(praktikumsstunden);
+
+            //Hinzufügen des Studenten in die Liste
+            studenten.add(wingStudent);
+        }
     }
 
     /**

@@ -1,9 +1,5 @@
 package de.nordakademie.se;
 
-import de.nordakademie.se.studenten.ainf.AinfStudentErzeuger;
-import de.nordakademie.se.studenten.bwl.BwlStudentErzeuger;
-import de.nordakademie.se.studenten.wing.WingStudentErzeuger;
-
 /**
  * @author Emil Militzer
  * <p>
@@ -15,12 +11,8 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        //Erzeugung einer neuen Studentenverwaltung mit allen Studentenarten
-        Studentenverwaltung studentenverwaltung = new Studentenverwaltung(
-                new AinfStudentErzeuger(),
-                new BwlStudentErzeuger(),
-                new WingStudentErzeuger()
-        );
+        //Erzeugung einer neuen Studentenverwaltung
+        Studentenverwaltung studentenverwaltung = new Studentenverwaltung();
         //Start der Anwendung
         studentenverwaltung.start();
     }

@@ -30,7 +30,7 @@ public abstract class Student {
      * @return Die Formatierten Stammdaten des Studenten
      */
     protected String getStammdatenFormatiert(){
-            return "Name: " + name + " Jahrgang: " + jahrgang;
+            return "Name: " + name + ", Jahrgang: " + jahrgang;
     }
 
     /**

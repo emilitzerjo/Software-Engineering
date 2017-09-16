@@ -42,6 +42,6 @@ public class WingStudent extends Student {
 
     @Override
     public String toString() {
-        return "Wing-Student = " + super.getStammdatenFormatiert() + " Lieblingswerkzeug: " + lieblingswerkzeug+" Praktikumsstunden: "+praktikumsstunden;
+        return "Wing-Student = " + super.getStammdatenFormatiert() + ", Lieblingswerkzeug: " + lieblingswerkzeug+", Praktikumsstunden: "+praktikumsstunden;
     }
 }

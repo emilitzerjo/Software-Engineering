@@ -29,6 +29,6 @@ public class AinfStudent extends Student {
 
     @Override
     public String toString() {
-        return "AinfStudent = " + super.getStammdatenFormatiert() + " Programmiersprache: " + programmiersprache;
+        return "AinfStudent = " + super.getStammdatenFormatiert() + ", Programmiersprache: " + programmiersprache;
     }
 }
