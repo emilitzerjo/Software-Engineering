@@ -1,21 +1,38 @@
 package de.nordakademie.se.framework;
 
-public class Student {
-	
-	private String name;
+/**
+ * @author Emil Militzer
+ * <p>
+ * Oberklasse für alle Studenten. Enthält die Stammdaten eines Studenten.
+ */
+public abstract class Student {
 
-	public String getName() {
-		return name;
-	}
+    private String name;
+    private int jahrgang;
 
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	@Override
-	public String toString() {
-		return "Name: "+name;
-	}
-	
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getJahrgang() {
+        return jahrgang;
+    }
+
+    public void setJahrgang(int jahrgang) {
+        this.jahrgang = jahrgang;
+    }
+
+    /**
+     * @return Stringdarstellung eines Studenten
+     */
+    @Override
+    public  String toString() {
+        return "Name: " + name + " Jahrgang: " + jahrgang;
+    }
+
 
 }
