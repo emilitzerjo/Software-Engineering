@@ -71,33 +71,16 @@ public class Studentenliste implements Initializable {
 
     private void initCols() {
         studiengangColumn.setCellValueFactory(
-                new Callback<TableColumn.CellDataFeatures<Student, String>, ObservableValue<String>>() {
-                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Student, String> p) {
-                        return new SimpleStringProperty(p.getValue().getStudiengang());
-                    }
-                }
+                p -> new SimpleStringProperty(p.getValue().getStudiengang())
         );
-
         nameColumn.setCellValueFactory(
-                new Callback<TableColumn.CellDataFeatures<Student, String>, ObservableValue<String>>() {
-                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Student, String> p) {
-                        return new SimpleStringProperty(p.getValue().getName());
-                    }
-                }
+                p -> new SimpleStringProperty(p.getValue().getName())
         );
         jahrgangColumn.setCellValueFactory(
-                new Callback<TableColumn.CellDataFeatures<Student, String>, ObservableValue<String>>() {
-                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Student, String> p) {
-                        return new SimpleStringProperty(p.getValue().getJahrgang() + "");
-                    }
-                }
+                p -> new SimpleStringProperty(p.getValue().getJahrgang() + "")
         );
         spezielleInfosColumn.setCellValueFactory(
-                new Callback<TableColumn.CellDataFeatures<Student, String>, ObservableValue<String>>() {
-                    public ObservableValue<String> call(TableColumn.CellDataFeatures<Student, String> p) {
-                        return new SimpleStringProperty(p.getValue().getSpezielleInfos());
-                    }
-                }
+                p -> new SimpleStringProperty(p.getValue().getSpezielleInfos())
         );
     }
 
