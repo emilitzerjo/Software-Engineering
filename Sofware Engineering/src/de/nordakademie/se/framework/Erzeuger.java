@@ -1,5 +1,11 @@
 package de.nordakademie.se.framework;
 
+import de.nordakademie.se.studenten.ainf.AinfStudent;
+import javafx.application.Platform;
+import javafx.geometry.Insets;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+
 import java.util.Scanner;
 
 /**
@@ -8,14 +14,6 @@ import java.util.Scanner;
  * Oberklasse für alle Erzeuger. Gibt Methoden vor, welche von den Unterklassen implementiert werden müssen
  */
 public abstract class Erzeuger {
-    /**
-     * Fabrikmethode
-     * Die Unterklassen müssen diese implementieren und den erzeugten Studenten zurückgeben.
-     *
-     * @return Konkreter Student
-     */
-    protected abstract Student erzeugeKonkretenStudent();
-
 
     /**
      * Hier wird der Name des Studienganges zurückgegeben.
@@ -24,29 +22,18 @@ public abstract class Erzeuger {
      */
     public abstract String getStudiengang();
 
+    public Dialog erstelleErfassungsdialog(){
+        Dialog<Student> dialog = new Dialog<>();
+        dialog.setTitle("Registriere Student");
+        dialog.setHeaderText("Erzeuge einen neuen "+getStudiengang()+" Studenten");
 
-    /**
-     * Hier werden die Stammdaten eines Studenten abgefragt und dem Studenten beigefügt.
-     *
-     * @return initialisierter Student
-     */
-    public Student erzeugeStudent() {
-        Scanner scanner = new Scanner(System.in);
+        dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
 
-        //Stammdaten einlesen
-        System.out.print("Bitte Name eingeben:");
-        String name = scanner.nextLine();
-        System.out.print("Bitte Jahrgang eingeben:");
-        int jahrgang = scanner.nextInt();
-
-        //Student durch implementierung der Unterklasse erzeugen
-        Student student = erzeugeKonkretenStudent();
-
-        //Stammdaten setzen
-        student.setName(name);
-        student.setJahrgang(jahrgang);
-        return student;
+        fuegeKonkreteErfassungHinzu(dialog);
+        return dialog;
     }
+
+    protected abstract void fuegeKonkreteErfassungHinzu(Dialog dialog);
 
 
 }

@@ -13,8 +13,6 @@ public class BwlStudent extends Student {
     private String golfplatz;
 
     /**
-     *
-     *
      * @param golfplatz Name des Lieblingsgolfplatzes
      */
     public BwlStudent(String golfplatz) {
@@ -30,8 +28,15 @@ public class BwlStudent extends Student {
     }
 
     @Override
-    public String toString() {
-        return "BWL-Stundent vong Geld her = " + super.getStammdatenFormatiert() + " Golfplatz: " + golfplatz;
+    public String getSpezielleInfos() {
+        return "Golfplatz: " + golfplatz;
     }
+
+    @Override
+    public String getStudiengang() {
+        return "BWL";
+    }
+
+    ;
 
 }

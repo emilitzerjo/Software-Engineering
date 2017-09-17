@@ -28,7 +28,12 @@ public class AinfStudent extends Student {
     }
 
     @Override
-    public String toString() {
-        return "AinfStudent = " + super.getStammdatenFormatiert() + " Programmiersprache: " + programmiersprache;
+    public String getSpezielleInfos() {
+        return "Programmiersprache: " + programmiersprache;
     }
+
+    @Override
+    public   String getStudiengang(){
+        return "angewandte Informatik";
+    };
 }
