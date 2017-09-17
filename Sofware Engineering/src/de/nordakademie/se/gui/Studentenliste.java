@@ -2,31 +2,21 @@ package de.nordakademie.se.gui;
 
 import de.nordakademie.se.framework.Erzeuger;
 import de.nordakademie.se.framework.Student;
-import de.nordakademie.se.studenten.ainf.AinfStudentErzeuger;
-import de.nordakademie.se.studenten.bwl.BwlStudentErzeuger;
-import de.nordakademie.se.studenten.wing.WingStudentErzeuger;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.util.Callback;
 import javafx.util.StringConverter;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Studentenliste implements Initializable {
 
-
-    @FXML
-    private Button registriereNeuenStudent;
 
     @FXML
     private ChoiceBox<Erzeuger> studiengangSpinner;
@@ -89,9 +79,7 @@ public class Studentenliste implements Initializable {
         Dialog dialog = studiengangSpinner.getValue().erstelleErfassungsdialog();
         Optional<Student> result = dialog.showAndWait();
 
-        result.ifPresent(student -> {
-            listStudenten.add(student);
-        });
+        result.ifPresent(student -> listStudenten.add(student));
     }
 
     public void initErzeuger(Erzeuger... erzeuger) {
