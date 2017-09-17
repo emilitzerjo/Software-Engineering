@@ -16,6 +16,7 @@ public class BwlStudent extends Student {
      * @param golfplatz Name des Lieblingsgolfplatzes
      */
     public BwlStudent(String golfplatz) {
+        super("BWL");
         this.golfplatz = golfplatz;
     }
 
@@ -31,12 +32,5 @@ public class BwlStudent extends Student {
     public String getSpezielleInfos() {
         return "Golfplatz: " + golfplatz;
     }
-
-    @Override
-    public String getStudiengang() {
-        return "BWL";
-    }
-
-    ;
 
 }

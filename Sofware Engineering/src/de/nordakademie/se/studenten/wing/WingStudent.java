@@ -20,6 +20,7 @@ public class WingStudent extends Student {
      * @param praktikumsstunden Die Anzahl der Stunden die er als Praktikant in der Werkstatt verbracht hat.
      */
     public WingStudent(String lieblingswerkzeug, int praktikumsstunden) {
+        super("Wirtschaftsingenieurwesen");
         this.lieblingswerkzeug = lieblingswerkzeug;
         this.praktikumsstunden = praktikumsstunden;
     }
@@ -45,10 +46,4 @@ public class WingStudent extends Student {
         return "Lieblingswerkzeug: " + lieblingswerkzeug + " Praktikumsstunden: " + praktikumsstunden;
     }
 
-    @Override
-    public String getStudiengang() {
-        return "Wirtschaftsingenieurwesen";
-    }
-
-    ;
 }

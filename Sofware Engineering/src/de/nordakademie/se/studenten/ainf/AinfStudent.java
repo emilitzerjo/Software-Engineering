@@ -16,6 +16,7 @@ public class AinfStudent extends Student {
      * @param programmiersprache Programmiersprache die er am besten kann
      */
     public AinfStudent(String programmiersprache) {
+        super("angewandte Informatik");
         this.programmiersprache = programmiersprache;
     }
 
@@ -31,9 +32,4 @@ public class AinfStudent extends Student {
     public String getSpezielleInfos() {
         return "Programmiersprache: " + programmiersprache;
     }
-
-    @Override
-    public   String getStudiengang(){
-        return "angewandte Informatik";
-    };
 }

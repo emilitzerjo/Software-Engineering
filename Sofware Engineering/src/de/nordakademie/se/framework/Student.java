@@ -9,6 +9,11 @@ public abstract class Student {
 
     private String name;
     private int jahrgang;
+    private String studiengang;
+
+    protected Student(String studiengang){
+        this.studiengang = studiengang;
+    }
 
     public String getName() {
         return name;
@@ -26,8 +31,11 @@ public abstract class Student {
         this.jahrgang = jahrgang;
     }
 
+    public String getStudiengang() {
+        return studiengang;
+    }
+
     public abstract String getSpezielleInfos();
 
-    public abstract  String getStudiengang();
 
 }

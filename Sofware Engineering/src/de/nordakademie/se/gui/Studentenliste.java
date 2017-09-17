@@ -26,25 +26,25 @@ public class Studentenliste implements Initializable {
 
 
     @FXML
-    Button registriereNeuenStudent;
+    private Button registriereNeuenStudent;
 
     @FXML
-    ChoiceBox<Erzeuger> studiengangSpinner;
+    private ChoiceBox<Erzeuger> studiengangSpinner;
 
     @FXML
-    TableView<Student> studentenTable;
+    private TableView<Student> studentenTable;
 
     @FXML
-    TableColumn<Student, String> studiengangColumn;
+    private TableColumn<Student, String> studiengangColumn;
     @FXML
-    TableColumn<Student, String> nameColumn;
+    private TableColumn<Student, String> nameColumn;
     @FXML
-    TableColumn<Student, String> jahrgangColumn;
+    private TableColumn<Student, String> jahrgangColumn;
     @FXML
-    TableColumn<Student, String> spezielleInfosColumn;
+    private TableColumn<Student, String> spezielleInfosColumn;
 
-    ObservableList<Student> listStudenten;
-    ObservableList<Erzeuger> listErzeuger;
+    private ObservableList<Student> listStudenten;
+    private ObservableList<Erzeuger> listErzeuger;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -86,7 +86,6 @@ public class Studentenliste implements Initializable {
 
     @FXML
     protected void erfasseNeuenStudent() throws IOException {
-        // Create the custom dialog.
         Dialog dialog = studiengangSpinner.getValue().erstelleErfassungsdialog();
         Optional<Student> result = dialog.showAndWait();
 

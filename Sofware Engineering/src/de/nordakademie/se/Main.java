@@ -20,15 +20,8 @@ import java.io.IOException;
  */
 public class Main extends Application {
 
-    private Label label;
-
     public static void main(String[] parameters) {
         launch(parameters);
-    }
-
-    @Override
-    public void init() {
-        label = new Label("Hello World");
     }
 
     @Override
@@ -36,12 +29,11 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui/Studenteliste.fxml"));
         Parent root = fxmlLoader.load();
 
-
         Studentenliste controller = fxmlLoader.<Studentenliste>getController();
+
         controller.initErzeuger(new AinfStudentErzeuger(), new BwlStudentErzeuger(), new WingStudentErzeuger());
+
         Scene scene = new Scene(root);
-
-
         stage.setTitle("Studentenverwaltung");
         stage.setScene(scene);
         stage.show();
