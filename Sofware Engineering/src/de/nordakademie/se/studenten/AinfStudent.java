@@ -1,6 +1,4 @@
-package de.nordakademie.se.studenten.ainf;
-
-import de.nordakademie.se.framework.Student;
+package de.nordakademie.se.studenten;
 
 /**
  * @author Emil Militzer
