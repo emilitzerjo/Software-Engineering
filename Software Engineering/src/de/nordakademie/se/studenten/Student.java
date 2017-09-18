@@ -1,7 +1,7 @@
 package de.nordakademie.se.studenten;
 
 /**
- * @author Emil Militzer
+ * @author Kevin Kehnen
  * <p>
  * Oberklasse für alle Studenten. Enthält die Stammdaten eines Studenten.
  */

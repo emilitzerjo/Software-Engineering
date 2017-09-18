@@ -4,7 +4,7 @@ import de.nordakademie.se.studenten.Student;
 import de.nordakademie.se.util.Konsole;
 
 /**
- * @author Emil Militzer
+ * @author Paul Konopik
  * <p>
  * Oberklasse für alle Erzeuger. Gibt Methoden vor, welche von den Unterklassen implementiert werden müssen
  */

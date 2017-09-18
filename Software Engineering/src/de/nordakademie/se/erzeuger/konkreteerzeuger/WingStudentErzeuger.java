@@ -7,7 +7,7 @@ import de.nordakademie.se.util.Konsole;
 
 
 /**
- * @author Emil Militzer
+ * @author Kevin Kehnen
  * <p>
  * Konkrete Implementierung eines Erzeugers für Wing-Studenten
  */

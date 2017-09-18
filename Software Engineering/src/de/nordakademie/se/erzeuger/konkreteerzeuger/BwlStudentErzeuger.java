@@ -6,7 +6,7 @@ import de.nordakademie.se.studenten.konkretestudenten.BwlStudent;
 import de.nordakademie.se.util.Konsole;
 
 /**
- * @author Emil Militzer
+ * @author Paul Konopik
  * <p>
  * Konkrete Implementierung eines Erzeugers für BWL-Studenten
  */
