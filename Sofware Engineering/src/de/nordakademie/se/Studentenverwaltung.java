@@ -1,8 +1,9 @@
 package de.nordakademie.se;
 
-import de.nordakademie.se.framework.Student;
-import de.nordakademie.se.studenten.ainf.AinfStudent;
-import de.nordakademie.se.studenten.wing.WingStudent;
+
+import de.nordakademie.se.studenten.AinfStudent;
+import de.nordakademie.se.studenten.Student;
+import de.nordakademie.se.studenten.WingStudent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +41,7 @@ public class Studentenverwaltung {
             System.out.print("Wähle Studentenart aus:");
             type = scanner.nextInt();
         }
-        if(type == 0){
+        if (type == 0) {
             //Abfrage der nötigen Daten
             System.out.println("Bitte Name eingeben: ");
             String name = scanner.next();
@@ -56,7 +57,7 @@ public class Studentenverwaltung {
 
             //Hinzufügen des Studenten in die Liste
             studenten.add(ainfStudent);
-        }else if(type == 1){
+        } else if (type == 1) {
 
             //Abfrage der nötigen Daten
             System.out.println("Bitte Name eingeben: ");
