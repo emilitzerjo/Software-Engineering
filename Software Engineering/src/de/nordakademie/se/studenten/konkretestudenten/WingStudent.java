@@ -5,19 +5,19 @@ import de.nordakademie.se.studenten.Student;
 /**
  * @author Emil Militzer
  * <p>
- * Konkrete Implementierung eines Wing-Students
+ * Konkrete Implementierung eines Wing-Studenten
  */
 public class WingStudent extends Student {
 
-    //besondere Eigenschaften eines Wing-Studenten
+    //spezielle Eigenschaften eines Wing-Studenten
     private String lieblingswerkzeug;
     private int praktikumsstunden;
 
     /**
      * Konstruktor für einen Wing-Studenten
      *
-     * @param lieblingswerkzeug Das Werkzeug welches er am liebsten benutzt.
-     * @param praktikumsstunden Die Anzahl der Stunden die er als Praktikant in der Werkstatt verbracht hat.
+     * @param lieblingswerkzeug Das Werkzeug, welches er am liebsten benutzt.
+     * @param praktikumsstunden Die Anzahl der Stunden, die er als Praktikant in der Werkstatt verbracht hat.
      */
     public WingStudent(String lieblingswerkzeug, int praktikumsstunden) {
         this.lieblingswerkzeug = lieblingswerkzeug;

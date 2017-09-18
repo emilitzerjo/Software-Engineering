@@ -9,14 +9,14 @@ import java.util.Scanner;
 /**
  * @author Emil Militzer
  * <p>
- * Konkrete Implementierung eines Ainf-Studenten Erzeugers
+ * Konkrete Implementierung eines Erzeugers für Ainf-Studenten
  */
 public class AinfStudentErzeuger extends Erzeuger {
 
     /**
-     * Erstellt einen neuen AinfStudent
+     * Erzeugt und initialisiert einen neuen Ainf-Student
      *
-     * @return AinfStudent
+     * @return Ainf-Student
      */
     @Override
     protected Student erzeugeKonkretenStudent() {
@@ -29,10 +29,8 @@ public class AinfStudentErzeuger extends Erzeuger {
         return new AinfStudent(programmiersprache);
     }
 
-
     @Override
     public String getStudiengang() {
-        return "angewandte Informatik";
+        return "Angewandte Informatik";
     }
-
 }

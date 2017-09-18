@@ -27,7 +27,6 @@ public class Studentenverwaltung {
         this.studenten = new ArrayList<>();
     }
 
-
     /**
      * Erzeugung eines neuen Studenten. Es können alle Studentenarten erzeugt werden, für die ein konkreter Erzeuger existiert.
      */
@@ -35,7 +34,7 @@ public class Studentenverwaltung {
         Scanner scanner = new Scanner(System.in);
 
         int type = -1;
-        // so lange keine vorhandene Studentenart ausgewählt wird erfolgt die Abfrage
+        //So lange keine vorhandene Studentenart ausgewählt wird, erfolgt die Abfrage
         while (type < 0 || type >= erzeuger.length) {
 
             System.out.println("Wähle Studentenart aus:");
@@ -57,14 +56,13 @@ public class Studentenverwaltung {
     private void zeigeAlleStudenten() {
         for (Student student : studenten) {
 
-            //Funktion welche auf allen Studenten egal welcher Art aufgerufen wird
+            //Funktion, welche auf allen Studenten egal welcher Art aufgerufen wird
             System.out.println(student.toString());
         }
-
     }
 
     /**
-     * Start der Programmloop.
+     * Start der Programmschleife.
      */
     public void start() {
         int auswahl;
@@ -77,13 +75,13 @@ public class Studentenverwaltung {
             System.out.println("2) alle Studenten anzeigen");
             Scanner scanner = new Scanner(System.in);
 
-            //einlesen der gewählten Aktion
+            //Einlesen der gewählten Aktion
             auswahl = scanner.nextInt();
             System.out.println();
 
             //Auswahl zwischen den Menüpunkten
             switch (auswahl) {
-                case 0: // 0 ist das Kommando für verlassen
+                case 0: //0 ist das Kommando für Verlassen
                     break;
                 case 1:
                     registriereNeuenStudent();
@@ -97,9 +95,7 @@ public class Studentenverwaltung {
             }
             System.out.println();
 
-            // 0 ist das Kommando für verlassen
+            //0 ist das Kommando für Verlassen
         } while (auswahl != 0);
     }
-
-
 }

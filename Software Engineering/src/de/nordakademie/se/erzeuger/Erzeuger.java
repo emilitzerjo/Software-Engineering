@@ -18,14 +18,12 @@ public abstract class Erzeuger {
      */
     protected abstract Student erzeugeKonkretenStudent();
 
-
     /**
      * Hier wird der Name des Studienganges zurückgegeben.
      *
      * @return Name des Studienganges
      */
     public abstract String getStudiengang();
-
 
     /**
      * Hier werden die Stammdaten eines Studenten abgefragt und dem Studenten beigefügt.
@@ -41,7 +39,7 @@ public abstract class Erzeuger {
         System.out.print("Bitte Jahrgang eingeben:");
         int jahrgang = scanner.nextInt();
 
-        //Student durch implementierung der Unterklasse erzeugen
+        //Student durch Implementierung der Unterklasse erzeugen
         Student student = erzeugeKonkretenStudent();
 
         //Stammdaten setzen
@@ -49,6 +47,4 @@ public abstract class Erzeuger {
         student.setJahrgang(jahrgang);
         return student;
     }
-
-
 }
