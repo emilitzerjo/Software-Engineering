@@ -1,4 +1,6 @@
-package de.nordakademie.se.studenten;
+package de.nordakademie.se.studenten.konkretestudenten;
+
+import de.nordakademie.se.studenten.Student;
 
 /**
  * @author Emil Militzer
