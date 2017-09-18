@@ -1,8 +1,8 @@
 package de.nordakademie.se;
 
-import de.nordakademie.se.erzeuger.AinfStudentErzeuger;
-import de.nordakademie.se.erzeuger.BwlStudentErzeuger;
-import de.nordakademie.se.erzeuger.WingStudentErzeuger;
+import de.nordakademie.se.erzeuger.konkreteerzeuger.AinfStudentErzeuger;
+import de.nordakademie.se.erzeuger.konkreteerzeuger.BwlStudentErzeuger;
+import de.nordakademie.se.erzeuger.konkreteerzeuger.WingStudentErzeuger;
 
 /**
  * @author Emil Militzer

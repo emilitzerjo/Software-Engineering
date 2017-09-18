@@ -1,8 +1,8 @@
-package de.nordakademie.se.erzeuger;
+package de.nordakademie.se.erzeuger.konkreteerzeuger;
 
 import de.nordakademie.se.erzeuger.Erzeuger;
 import de.nordakademie.se.studenten.Student;
-import de.nordakademie.se.studenten.WingStudent;
+import de.nordakademie.se.studenten.konkretestudenten.WingStudent;
 
 import java.util.Scanner;
 
