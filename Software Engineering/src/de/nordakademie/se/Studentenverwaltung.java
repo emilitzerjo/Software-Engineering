@@ -32,15 +32,17 @@ public class Studentenverwaltung {
      */
     private void registriereNeuenStudent() {
         Scanner scanner = new Scanner(System.in);
+
         int type = -1;
         // so lange keine vorhandene Studentenart ausgewählt wird erfolgt die Abfrage
         while (type < 0 || type >= 2) {
             //Alle vorhandenen Studentenarten werden ausgegeben
+            System.out.println("Wähle Studentenart aus:");
             System.out.println("0) angewandte Informatik");
             System.out.println("1) Wirtschaftsingenieurwesen");
 
-            System.out.print("Wähle Studentenart aus:");
             type = scanner.nextInt();
+            System.out.println();
         }
         if (type == 0) {
             //Abfrage der nötigen Daten
@@ -89,6 +91,7 @@ public class Studentenverwaltung {
             //Funktion welche auf allen Studenten egal welcher Art aufgerufen wird
             System.out.println(student.toString());
         }
+
     }
 
     /**
@@ -99,6 +102,7 @@ public class Studentenverwaltung {
         System.out.println("Herzlich Willkommen zur Studentenverwaltung");
         do {
             //Ausgabe des Menüs
+            System.out.println("Bitte wählen Sie eine Atkion aus:");
             System.out.println("0) Verlassen");
             System.out.println("1) neuen Student registrieren");
             System.out.println("2) alle Studenten anzeigen");
@@ -106,6 +110,7 @@ public class Studentenverwaltung {
 
             //einlesen der gewählten Aktion
             auswahl = scanner.nextInt();
+            System.out.println();
 
             //Auswahl zwischen den Menüpunkten
             switch (auswahl) {
@@ -121,6 +126,7 @@ public class Studentenverwaltung {
                     System.out.println("Unbekannter Eingabewert! Bitte erneut versuchen!");
                     break;
             }
+            System.out.println();
 
             // 0 ist das Kommando für verlassen
         } while (auswahl != 0);
