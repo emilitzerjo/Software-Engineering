@@ -2,10 +2,10 @@ package de.nordakademie.se;
 
 import de.nordakademie.se.erzeuger.Erzeuger;
 import de.nordakademie.se.studenten.Student;
+import de.nordakademie.se.util.Konsole;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * @author Emil Militzer
@@ -32,8 +32,6 @@ public class Studentenverwaltung {
      * Erzeugung eines neuen Studenten. Es können alle Studentenarten erzeugt werden, für die ein konkreter Erzeuger existiert.
      */
     private void registriereNeuenStudent() {
-        Scanner scanner = new Scanner(System.in);
-
         int type = -1;
         // so lange keine vorhandene Studentenart ausgewählt wird erfolgt die Abfrage
         while (type < 0 || type >= erzeuger.length) {
@@ -44,7 +42,7 @@ public class Studentenverwaltung {
             for (int i = 0; i < erzeuger.length; i++) {
                 System.out.println(i + ")" + erzeuger[i].getStudiengang());
             }
-            type = scanner.nextInt();
+            type = Konsole.readInt();
             System.out.println();
         }
         //Ein Student wird mit dem ausgewählten Erzeuger erzeugt
@@ -75,10 +73,9 @@ public class Studentenverwaltung {
             System.out.println("0) Verlassen");
             System.out.println("1) neuen Student registrieren");
             System.out.println("2) alle Studenten anzeigen");
-            Scanner scanner = new Scanner(System.in);
 
             //einlesen der gewählten Aktion
-            auswahl = scanner.nextInt();
+            auswahl = Konsole.readInt();
             System.out.println();
 
             //Auswahl zwischen den Menüpunkten

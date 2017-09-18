@@ -1,12 +1,11 @@
 package de.nordakademie.se.erzeuger;
 
 import de.nordakademie.se.studenten.Student;
-
-import java.util.Scanner;
+import de.nordakademie.se.util.Konsole;
 
 /**
  * @author Emil Militzer
- *
+ * <p>
  * Oberklasse für alle Erzeuger. Gibt Methoden vor, welche von den Unterklassen implementiert werden müssen
  */
 public abstract class Erzeuger {
@@ -33,13 +32,12 @@ public abstract class Erzeuger {
      * @return initialisierter Student
      */
     public Student erzeugeStudent() {
-        Scanner scanner = new Scanner(System.in);
 
         //Stammdaten einlesen
         System.out.print("Bitte Name eingeben:");
-        String name = scanner.nextLine();
+        String name = Konsole.readString();
         System.out.print("Bitte Jahrgang eingeben:");
-        int jahrgang = scanner.nextInt();
+        int jahrgang = Konsole.readInt();
 
         //Student durch implementierung der Unterklasse erzeugen
         Student student = erzeugeKonkretenStudent();

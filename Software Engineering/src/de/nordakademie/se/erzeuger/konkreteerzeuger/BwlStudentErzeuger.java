@@ -1,10 +1,9 @@
 package de.nordakademie.se.erzeuger.konkreteerzeuger;
 
 import de.nordakademie.se.erzeuger.Erzeuger;
-import de.nordakademie.se.studenten.konkretestudenten.BwlStudent;
 import de.nordakademie.se.studenten.Student;
-
-import java.util.Scanner;
+import de.nordakademie.se.studenten.konkretestudenten.BwlStudent;
+import de.nordakademie.se.util.Konsole;
 
 /**
  * @author Emil Militzer
@@ -20,10 +19,10 @@ public class BwlStudentErzeuger extends Erzeuger {
      */
     @Override
     protected Student erzeugeKonkretenStudent() {
-        Scanner scanner = new Scanner(System.in);
+
         //Abfrage der besonderen Eigenschaft.
         System.out.println("Lieblingsgolfplatz eingeben:");
-        String golfplatz = scanner.nextLine();
+        String golfplatz = Konsole.readString();
 
         return new BwlStudent(golfplatz);
 

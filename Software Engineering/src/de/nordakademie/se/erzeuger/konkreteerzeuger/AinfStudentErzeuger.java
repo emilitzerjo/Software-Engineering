@@ -1,10 +1,10 @@
 package de.nordakademie.se.erzeuger.konkreteerzeuger;
 
 import de.nordakademie.se.erzeuger.Erzeuger;
-import de.nordakademie.se.studenten.konkretestudenten.AinfStudent;
 import de.nordakademie.se.studenten.Student;
+import de.nordakademie.se.studenten.konkretestudenten.AinfStudent;
+import de.nordakademie.se.util.Konsole;
 
-import java.util.Scanner;
 
 /**
  * @author Emil Militzer
@@ -20,11 +20,10 @@ public class AinfStudentErzeuger extends Erzeuger {
      */
     @Override
     protected Student erzeugeKonkretenStudent() {
-        Scanner scanner = new Scanner(System.in);
 
         //Abfrage des besonderen Eigenschaft
         System.out.println("Programmiersprache(n) eingeben:");
-        String programmiersprache = scanner.nextLine();
+        String programmiersprache = Konsole.readString();
 
         return new AinfStudent(programmiersprache);
     }
