@@ -9,7 +9,7 @@ import de.nordakademie.se.studenten.Student;
  */
 public class BwlStudent extends Student {
 
-    //besondere Eigenschaft eines BWL Studenten
+    //spezielle Eigenschaft eines BWL Studenten
     private String golfplatz;
 
     /**
@@ -29,7 +29,6 @@ public class BwlStudent extends Student {
 
     @Override
     public String toString() {
-        return "BWL-Stundent  = " + super.getStammdatenFormatiert() + ", Golfplatz: " + golfplatz;
+        return "BWL-Student  = " + super.getStammdatenFormatiert() + ", Golfplatz: " + golfplatz;
     }
-
 }

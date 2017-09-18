@@ -9,12 +9,12 @@ import de.nordakademie.se.util.Konsole;
 /**
  * @author Emil Militzer
  * <p>
- * Konkrete Implementierung für eine Wing-Student Erzeuger
+ * Konkrete Implementierung eines Erzeugers für Wing-Studenten
  */
 public class WingStudentErzeuger extends Erzeuger {
 
     /**
-     * Erzeugt einen neuen Wing-Student
+     * Erzeugt und initialisiert einen neuen Wing-Student
      *
      * @return Wing-Student
      */
@@ -30,10 +30,8 @@ public class WingStudentErzeuger extends Erzeuger {
         return new WingStudent(lieblingswerkzeug, praktikumsstunden);
     }
 
-
     @Override
     public String getStudiengang() {
         return "Wirtschaftsingenieurwesen";
     }
-
 }
