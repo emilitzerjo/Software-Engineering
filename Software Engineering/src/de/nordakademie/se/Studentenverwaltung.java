@@ -38,12 +38,14 @@ public class Studentenverwaltung {
         // so lange keine vorhandene Studentenart ausgewählt wird erfolgt die Abfrage
         while (type < 0 || type >= erzeuger.length) {
 
+            System.out.println("Wähle Studentenart aus:");
+
             //Alle vorhandenen Studentenarten werden ausgegeben
             for (int i = 0; i < erzeuger.length; i++) {
                 System.out.println(i + ")" + erzeuger[i].getStudiengang());
             }
-            System.out.print("Wähle Studentenart aus:");
             type = scanner.nextInt();
+            System.out.println();
         }
         //Ein Student wird mit dem ausgewählten Erzeuger erzeugt
         studenten.add(erzeuger[type].erzeugeStudent());
@@ -58,6 +60,7 @@ public class Studentenverwaltung {
             //Funktion welche auf allen Studenten egal welcher Art aufgerufen wird
             System.out.println(student.toString());
         }
+
     }
 
     /**
@@ -68,6 +71,7 @@ public class Studentenverwaltung {
         System.out.println("Herzlich Willkommen zur Studentenverwaltung");
         do {
             //Ausgabe des Menüs
+            System.out.println("Bitte wählen Sie eine Atkion aus:");
             System.out.println("0) Verlassen");
             System.out.println("1) neuen Student registrieren");
             System.out.println("2) alle Studenten anzeigen");
@@ -75,6 +79,7 @@ public class Studentenverwaltung {
 
             //einlesen der gewählten Aktion
             auswahl = scanner.nextInt();
+            System.out.println();
 
             //Auswahl zwischen den Menüpunkten
             switch (auswahl) {
@@ -90,6 +95,7 @@ public class Studentenverwaltung {
                     System.out.println("Unbekannter Eingabewert! Bitte erneut versuchen!");
                     break;
             }
+            System.out.println();
 
             // 0 ist das Kommando für verlassen
         } while (auswahl != 0);
