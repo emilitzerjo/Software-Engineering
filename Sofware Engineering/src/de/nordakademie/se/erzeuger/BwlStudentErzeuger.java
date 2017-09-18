@@ -1,7 +1,8 @@
-package de.nordakademie.se.studenten.bwl;
+package de.nordakademie.se.erzeuger;
 
-import de.nordakademie.se.framework.Erzeuger;
-import de.nordakademie.se.framework.Student;
+import de.nordakademie.se.erzeuger.Erzeuger;
+import de.nordakademie.se.studenten.BwlStudent;
+import de.nordakademie.se.studenten.Student;
 
 import java.util.Scanner;
 

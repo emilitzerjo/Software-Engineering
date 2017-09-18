@@ -1,6 +1,4 @@
-package de.nordakademie.se.studenten.ainf;
-
-import de.nordakademie.se.framework.Student;
+package de.nordakademie.se.studenten;
 
 /**
  * @author Emil Militzer
@@ -29,6 +27,6 @@ public class AinfStudent extends Student {
 
     @Override
     public String toString() {
-        return "AinfStudent = " + super.getStammdatenFormatiert() + " Programmiersprache: " + programmiersprache;
+        return "AinfStudent = " + super.getStammdatenFormatiert() + ", Programmiersprache: " + programmiersprache;
     }
 }

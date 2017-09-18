@@ -1,6 +1,4 @@
-package de.nordakademie.se.studenten.wing;
-
-import de.nordakademie.se.framework.Student;
+package de.nordakademie.se.studenten;
 
 /**
  * @author Emil Militzer
@@ -42,6 +40,6 @@ public class WingStudent extends Student {
 
     @Override
     public String toString() {
-        return "Wing-Student = " + super.getStammdatenFormatiert() + " Lieblingswerkzeug: " + lieblingswerkzeug+" Praktikumsstunden: "+praktikumsstunden;
+        return "Wing-Student = " + super.getStammdatenFormatiert() + ", Lieblingswerkzeug: " + lieblingswerkzeug + ", Praktikumsstunden: " + praktikumsstunden;
     }
 }

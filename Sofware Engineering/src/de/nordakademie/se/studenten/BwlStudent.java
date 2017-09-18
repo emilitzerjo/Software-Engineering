@@ -1,6 +1,4 @@
-package de.nordakademie.se.studenten.bwl;
-
-import de.nordakademie.se.framework.Student;
+package de.nordakademie.se.studenten;
 
 /**
  * @author Emil Militzer
@@ -13,8 +11,6 @@ public class BwlStudent extends Student {
     private String golfplatz;
 
     /**
-     *
-     *
      * @param golfplatz Name des Lieblingsgolfplatzes
      */
     public BwlStudent(String golfplatz) {
@@ -31,7 +27,7 @@ public class BwlStudent extends Student {
 
     @Override
     public String toString() {
-        return "BWL-Stundent vong Geld her = " + super.getStammdatenFormatiert() + " Golfplatz: " + golfplatz;
+        return "BWL-Stundent  = " + super.getStammdatenFormatiert() + ", Golfplatz: " + golfplatz;
     }
 
 }

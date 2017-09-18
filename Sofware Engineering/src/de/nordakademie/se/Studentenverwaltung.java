@@ -1,7 +1,7 @@
 package de.nordakademie.se;
 
-import de.nordakademie.se.framework.Erzeuger;
-import de.nordakademie.se.framework.Student;
+import de.nordakademie.se.erzeuger.Erzeuger;
+import de.nordakademie.se.studenten.Student;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,6 @@ public class Studentenverwaltung {
     private List<Student> studenten;
 
     public Studentenverwaltung(Erzeuger... erzeuger) {
-        super();
         this.erzeuger = erzeuger;
         this.studenten = new ArrayList<>();
     }
