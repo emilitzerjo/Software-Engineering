@@ -1,7 +1,7 @@
 package de.nordakademie.se.erzeuger;
 
 /**
- * @author Emil Militzer
+ * @author Paul Konopik
  *
  * Oberklasse für alle Erzeuger. Gibt Methoden vor, welche von den Unterklassen implementiert werden müssen
  */

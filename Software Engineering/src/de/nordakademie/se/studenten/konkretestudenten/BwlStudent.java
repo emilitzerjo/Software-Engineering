@@ -3,7 +3,7 @@ package de.nordakademie.se.studenten.konkretestudenten;
 import de.nordakademie.se.studenten.Student;
 
 /**
- * @author Emil Militzer
+ * @author Paul Konopik
  * <p>
  * Konkrete Implementierung eines BWL Studenten
  */
