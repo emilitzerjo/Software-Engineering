@@ -1,9 +1,10 @@
 package de.nordakademie.se;
 
 
-import de.nordakademie.se.studenten.AinfStudent;
+
 import de.nordakademie.se.studenten.Student;
-import de.nordakademie.se.studenten.WingStudent;
+import de.nordakademie.se.studenten.konkretestudenten.AinfStudent;
+import de.nordakademie.se.studenten.konkretestudenten.WingStudent;
 
 import java.util.ArrayList;
 import java.util.List;
