@@ -1,7 +1,5 @@
 package de.nordakademie.se;
 
-
-
 import de.nordakademie.se.studenten.Student;
 import de.nordakademie.se.studenten.konkretestudenten.AinfStudent;
 import de.nordakademie.se.studenten.konkretestudenten.WingStudent;
@@ -26,7 +24,6 @@ public class Studentenverwaltung {
         this.studenten = new ArrayList<>();
     }
 
-
     /**
      * Erzeugung eines neuen Studenten.
      */
@@ -34,7 +31,7 @@ public class Studentenverwaltung {
         Scanner scanner = new Scanner(System.in);
 
         int type = -1;
-        // so lange keine vorhandene Studentenart ausgewählt wird erfolgt die Abfrage
+        //So lange keine vorhandene Studentenart ausgewählt wird, erfolgt die Abfrage
         while (type < 0 || type >= 2) {
             //Alle vorhandenen Studentenarten werden ausgegeben
             System.out.println("Wähle Studentenart aus:");
@@ -61,7 +58,6 @@ public class Studentenverwaltung {
             //Hinzufügen des Studenten in die Liste
             studenten.add(ainfStudent);
         } else if (type == 1) {
-
             //Abfrage der nötigen Daten
             System.out.println("Bitte Name eingeben: ");
             String name = scanner.next();
@@ -91,11 +87,10 @@ public class Studentenverwaltung {
             //Funktion welche auf allen Studenten egal welcher Art aufgerufen wird
             System.out.println(student.toString());
         }
-
     }
 
     /**
-     * Start der Programmloop.
+     * Start der Programmschleife.
      */
     public void start() {
         int auswahl;
@@ -108,13 +103,13 @@ public class Studentenverwaltung {
             System.out.println("2) alle Studenten anzeigen");
             Scanner scanner = new Scanner(System.in);
 
-            //einlesen der gewählten Aktion
+            //Einlesen der gewählten Aktion
             auswahl = scanner.nextInt();
             System.out.println();
 
             //Auswahl zwischen den Menüpunkten
             switch (auswahl) {
-                case 0: // 0 ist das Kommando für verlassen
+                case 0: //0 ist das Kommando für Verlassen
                     break;
                 case 1:
                     registriereNeuenStudent();
@@ -128,9 +123,8 @@ public class Studentenverwaltung {
             }
             System.out.println();
 
-            // 0 ist das Kommando für verlassen
+            //0 ist das Kommando für Verlassen
         } while (auswahl != 0);
     }
-
 
 }
