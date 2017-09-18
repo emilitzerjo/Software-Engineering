@@ -102,7 +102,7 @@ public class Studentenverwaltung {
         System.out.println("Herzlich Willkommen zur Studentenverwaltung");
         do {
             //Ausgabe des Menüs
-            System.out.println("Bitte wählen Sie eine Atkion aus:");
+            System.out.println("Bitte wählen Sie eine Aktion aus:");
             System.out.println("0) Verlassen");
             System.out.println("1) neuen Student registrieren");
             System.out.println("2) alle Studenten anzeigen");
